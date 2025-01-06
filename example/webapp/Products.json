@@ -1,0 +1,60 @@
+{
+    "ProductCollection": [
+      {
+        "Name": "Product A",
+        "ProductId": "12345",
+        "SupplierName": "Supplier X",
+        "Width": 50,
+        "Depth": 30,
+        "Height": 20,
+        "DimUnit": "cm",
+        "Price": 199.99,
+        "CurrencyCode": "USD"
+      },
+      {
+        "Name": "Product B",
+        "ProductId": "67890",
+        "SupplierName": "Supplier Y",
+        "Width": 40,
+        "Depth": 25,
+        "Height": 15,
+        "DimUnit": "cm",
+        "Price": 149.99,
+        "CurrencyCode": "EUR"
+      },
+      {
+        "Name": "Product C",
+        "ProductId": "11223",
+        "SupplierName": "Supplier Z",
+        "Width": 60,
+        "Depth": 40,
+        "Height": 25,
+        "DimUnit": "cm",
+        "Price": 299.99,
+        "CurrencyCode": "USD"
+      },
+      {
+        "Name": "Product D",
+        "ProductId": "44556",
+        "SupplierName": "Supplier X",
+        "Width": 80,
+        "Depth": 50,
+        "Height": 30,
+        "DimUnit": "cm",
+        "Price": 499.99,
+        "CurrencyCode": "GBP"
+      },
+      {
+        "Name": "Product E",
+        "ProductId": "78901",
+        "SupplierName": "Supplier Y",
+        "Width": 30,
+        "Depth": 20,
+        "Height": 10,
+        "DimUnit": "cm",
+        "Price": 89.99,
+        "CurrencyCode": "USD"
+      }
+    ]
+  }
+  

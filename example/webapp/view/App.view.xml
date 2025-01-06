@@ -1,0 +1,8 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="RouteApp.controller.App">
+    
+    <App id="app">
+    </App>
+</mvc:View>

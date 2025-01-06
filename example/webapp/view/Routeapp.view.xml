@@ -1,0 +1,25 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="RouteApp.controller.App">
+
+    <App id="app">
+        <Shell>
+            <Page title="Login" showHeader="false">
+                <content>
+                    <VBox alignItems="Center" justifyContent="Center" height="100%">
+                        <FlexBox direction="Column" alignItems="Center" justifyContent="Center">
+                            <Title text="Login" class="sapUiMediumMarginBottom"/>
+                            <Input id="userInput" placeholder="Username" class="sapUiSmallMarginBottom" width="300px"/>
+                            <Input id="passwordInput" placeholder="Password" type="Password" class="sapUiSmallMarginBottom" width="300px"/>
+                            <HBox class="sapUiSmallMarginBottom">
+                                <items>
+                                    <Button text="Login" press="onLoginPress" width="150px"/>
+                                    <Button text="Register" press="onRegisterPress" width="150px"/>
+                                </items>
+                            </HBox>
+                        </FlexBox>
+                    </VBox>
+                </content>
+            </Page>
+        </Shell>
+    </App>
+</mvc:View>
