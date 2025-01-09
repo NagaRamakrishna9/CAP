@@ -43,7 +43,7 @@
       ],
       "targets": {
         "ROUTEAPP": {
-          "viewName": "ROUTEAPP",
+          "viewName": "RouteApp",
           "viewLevel": 0
         },
         "home": {

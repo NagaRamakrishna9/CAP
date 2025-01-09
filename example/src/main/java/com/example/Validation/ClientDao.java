@@ -25,11 +25,12 @@ public class ClientDao {
 
         Integer status = (Integer) storedProcedure.getOutputParameterValue("p_status");
         String message = (String) storedProcedure.getOutputParameterValue("p_message"); 
-        if (status != null && status == 0) {
-            return -1;
-        }
-        if (status != null && status == 1) {    
-            return 1;  
+        if (status != null) {
+            if (status == 1) {  // Authentication successful
+                return 1;  
+            } else if (status == 0 && message.equals("The client is inactive")) {  // Client is inactive
+                return 0; 
+            }
         }
         return -1;
     }

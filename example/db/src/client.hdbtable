@@ -1,5 +1,0 @@
-COLUMN TABLE "client" (
-    clientname NVARCHAR(255) PRIMARY KEY,
-    password NVARCHAR(255),
-    status INT
-);

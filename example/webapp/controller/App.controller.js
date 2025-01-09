@@ -32,7 +32,7 @@ sap.ui.define([
                     if (response.status === 403) {
                         return response.json().then(function (data) {
                             MessageToast.show(data.message); 
-                            return Promise.reject("Client is inactive");
+                            return Promise.reject("The client is inactive");
                         });
                     }
                     return response.json().then(function (data) {
@@ -49,7 +49,7 @@ sap.ui.define([
                 }
             })
             .catch(function (error) {
-                if (error !== "Client is inactive") {
+                if (error !== "The client is inactive") {
                     MessageToast.show("Invalid credentials. Please try again later.");
                 }
             });

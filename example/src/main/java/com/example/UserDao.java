@@ -14,10 +14,8 @@ public class UserDao {
     @PersistenceContext
     private EntityManager entityManager;
 
-    // Create User using stored procedure
     @Transactional
     public void createUser(String name, String email) {
-        // Define and call the stored procedure
         StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("create_user");
         storedProcedure.registerStoredProcedureParameter("p_name", String.class, ParameterMode.IN);
         storedProcedure.registerStoredProcedureParameter("p_email", String.class, ParameterMode.IN);
@@ -26,10 +24,10 @@ public class UserDao {
         storedProcedure.execute();
     }
 
-    // Get User by ID using stored procedure
     public User getUserById(Long id) {
         try {
-            StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("get_user_by_id", User.class);
+            // StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("get_user_by_id", User.class);
+            StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("get_user_by_id",User.class);
             storedProcedure.registerStoredProcedureParameter("p_id", Long.class, ParameterMode.IN);
             storedProcedure.setParameter("p_id", id);
             return (User) storedProcedure.getSingleResult();
@@ -38,7 +36,7 @@ public class UserDao {
         }
     }
 
-    // Update User using stored procedure
+   
     @Transactional
     public void updateUser(Long id, String name, String email) {
         StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("update_user");
@@ -55,7 +53,8 @@ public class UserDao {
     @Transactional
     public void deleteUser(Long id) {
         StoredProcedureQuery storedProcedure = entityManager.createStoredProcedureQuery("delete_user");
-        storedProcedure.registerStoredProcedureParameter("p_id", Long.class, ParameterMode.IN);
+        // storedProcedure.registerStoredProcedureParameter("p_id", Long.class, ParameterMode.IN);
+        storedProcedure.registerStoredProcedureParameter("p_id",Long.class,ParameterMode.IN);
         storedProcedure.setParameter("p_id", id);
         storedProcedure.execute();
     }
